@@ -503,6 +503,138 @@
             opacity: 1;
         }
 
+        /* === Pricing & Timings Section === */
+        .pricing {
+            padding: 100px 0;
+            background-color: var(--bg-obsidian);
+        }
+
+        .timings-banner {
+            background: linear-gradient(135deg, var(--bg-charcoal), var(--bg-card));
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--accent-primary);
+            margin-bottom: 60px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .timing-block {
+            text-align: center;
+        }
+
+        .timing-icon {
+            font-size: 2rem;
+            color: var(--accent-primary);
+            margin-bottom: 12px;
+        }
+
+        .timing-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .timing-hours {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .pricing-card {
+            background: var(--bg-card);
+            padding: 50px 40px;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(255,255,255,0.03);
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .pricing-duration {
+            font-size: 1.2rem;
+            color: var(--accent-primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .pricing-price {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-family: var(--font-heading);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .pricing-price span {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            margin-right: 5px;
+        }
+
+        .pricing-features {
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--accent-primary);
+            color: #fff;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        /* === Specific Utility === */
+        .gender-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.05);
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+        
+        .gender-tag i {
+            color: var(--accent-primary);
+        }
+
         /* === Footer / Contact === */
         footer {
             background-color: #030406;
@@ -649,6 +781,7 @@
                 <li><a href="#about">Experience</a></li>
                 <li><a href="#services">Programs</a></li>
                 <li><a href="#trainer">Trainer</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
@@ -664,6 +797,10 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content reveal">
             <span class="mantra">।। हर हर महादेव ।। पहला सुख निरोगी काया</span>
+            <br>
+            <div class="gender-tag">
+                <i class="fa-solid fa-venus-mars"></i> Unisex Gym - For Both Boys & Girls
+            </div>
             <h1>Elevate Your <br><span class="accent-text">Physical Potential</span></h1>
             <p>Experience a premium, distraction-free environment engineered for results. Build strength, enhance aesthetics, and optimize your health with elite coaching.</p>
             <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
@@ -762,6 +899,58 @@
         </div>
     </section>
 
+    <!-- Pricing & Timings Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Join The Community</span>
+                <h2 class="section-title">Memberships & <span class="accent-text">Timings</span></h2>
+            </div>
+
+            <!-- Shift Timings Banner -->
+            <div class="timings-banner reveal">
+                <div class="timing-block">
+                    <i class="fa-solid fa-sun timing-icon"></i>
+                    <h3 class="timing-title">Morning Shift</h3>
+                    <p class="timing-hours">5:15 AM &mdash; 11:00 AM</p>
+                </div>
+                <div class="timing-block">
+                    <i class="fa-solid fa-moon timing-icon"></i>
+                    <h3 class="timing-title">Evening Shift</h3>
+                    <p class="timing-hours">4:30 PM &mdash; 9:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Pricing Grid -->
+            <div class="pricing-grid">
+                <!-- 1 Month -->
+                <div class="pricing-card reveal">
+                    <div class="pricing-duration">1 Month</div>
+                    <div class="pricing-price"><span>₹</span>600</div>
+                    <p class="pricing-features">Standard full access to the gym during operating hours. Perfect for getting started.</p>
+                    <a href="#contact" class="btn btn-outline" style="width: 100%;">Enroll Now</a>
+                </div>
+                
+                <!-- 2 Months -->
+                <div class="pricing-card reveal" style="border-color: rgba(14, 165, 233, 0.4); background: rgba(14, 165, 233, 0.03);">
+                    <div class="popular-badge">POPULAR</div>
+                    <div class="pricing-duration">2 Months</div>
+                    <div class="pricing-price"><span>₹</span>1100</div>
+                    <p class="pricing-features">Save ₹100. Full facility access with consistent progress tracking.</p>
+                    <a href="#contact" class="btn" style="width: 100%;">Enroll Now</a>
+                </div>
+
+                <!-- 3 Months -->
+                <div class="pricing-card reveal">
+                    <div class="pricing-duration">3 Months</div>
+                    <div class="pricing-price"><span>₹</span>1500</div>
+                    <p class="pricing-features">Save ₹300. The ultimate value plan for dedicated athletes committed to results.</p>
+                    <a href="#contact" class="btn btn-outline" style="width: 100%;">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Gallery / Vibe Section -->
     <section class="gallery" id="gallery">
         <div class="container">
@@ -796,7 +985,7 @@
                         <span>Universal <span style="font-weight:300; color:var(--text-muted)">Fitness</span></span>
                     </a>
                     <p>A premium training facility dedicated to physical excellence, mental fortitude, and absolute discipline.</p>
-                    <a href="https://www.youtube.com/@universalgymdabra" target="_blank" class="social-link mt-4">
+                    <a href="https://youtube.com" target="_blank" class="social-link mt-4">
                         <i class="fa-brands fa-youtube" style="color: inherit;"></i>
                         Universal Fitness Gym Dabra
                     </a>
